@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavigationView" parent="@style/Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@color/bottom_navigation_color</item>
+        <item name="itemTextColor">@color/bottom_navigation_color</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:background">#F5F5F2</item>
+        <!--<item name="fontPath">fonts/SFProTextMedium.ttf</item>-->
+
+    </style>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_icon_user_home"/>
+    <item
+        android:id="@+id/kotlin"
+        android:icon="@drawable/ic_ok"
+        android:title="Kotlin"/>
+    <item
+        android:id="@+id/java"
+        android:icon="@drawable/ic_icon_user_more"
+        android:title="Java"/>
+    <item
+        android:id="@+id/ui"
+        android:icon="@mipmap/ic_launcher"
+        android:title="UI"/>
+    <item
+        android:id="@+id/network"
+        android:icon="@drawable/ic_internet"
+        android:title="Network"/>
+
+</menu>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.saklayen.hackandroid.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/navigate_to_navComponentFragment"
+            app:destination="@id/navComponentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/navComponentFragment"
+        android:name="com.saklayen.hackandroid.ui.home.fragments.navigationComponent.NavComponentFragment"
+        android:label="fragment_nav_component"
+        tools:layout="@layout/fragment_nav_component">
+        <argument
+            android:name="data"
+            app:argType="string"/>
+        <action
+            android:id="@+id/navigate_to_stupFragment"
+            app:destination="@id/stupFragment"/>
+        <action
+            android:id="@+id/navigate_to_safeArgsFragment"
+            app:destination="@id/safeArgsFragment" />
+        <action
+            android:id="@+id/navigate_to_backStackFragment"
+            app:destination="@id/backStackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stupFragment"
+        android:name="com.saklayen.hackandroid.ui.home.fragments.navigationComponent.setup.StupFragment"
+        android:label="fragment_stup"
+        tools:layout="@layout/fragment_stup" >
+        <action
+            android:id="@+id/navigateSetup_to_safeArgsFragment"
+            app:destination="@id/safeArgsFragment"
+            app:popUpTo="@id/navComponentFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/navigate_to_noteAddFragment"
+            app:destination="@id/noteAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/safeArgsFragment"
+        android:name="com.saklayen.hackandroid.ui.home.fragments.navigationComponent.safeArgs.SafeArgsFragment"
+        android:label="fragment_safe_args"
+        tools:layout="@layout/fragment_safe_args" />
+    <fragment
+        android:id="@+id/backStackFragment"
+        android:name="com.saklayen.hackandroid.ui.home.fragments.navigationComponent.backStack.BackStackFragment"
+        android:label="fragment_back_stack"
+        tools:layout="@layout/fragment_back_stack" />
+    <fragment
+        android:id="@+id/noteAddFragment"
+        android:name="com.saklayen.hackandroid.ui.home.fragments.note.NoteAddFragment"
+        android:label="NoteAddFragment" />
+</navigation>
