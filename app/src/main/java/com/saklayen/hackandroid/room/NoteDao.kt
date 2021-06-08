@@ -1,5 +1,6 @@
 package com.saklayen.hackandroid.room
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
@@ -9,6 +10,7 @@ interface NoteDao {
 
     @Update
     fun updateNote(note: Note)
+
     @Query("select * from notes")
-    fun getAllNotes(): List<Note>
+    fun getAllNotes(): LiveData<List<Note>>
 }

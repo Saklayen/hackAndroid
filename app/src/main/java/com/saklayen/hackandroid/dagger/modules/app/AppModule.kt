@@ -2,6 +2,7 @@ package com.saklayen.hackandroid.dagger.modules.app
 
 import android.app.Application
 import android.content.Context
+import android.util.Log
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
@@ -24,9 +25,10 @@ class AppModule {
     fun providesApplicationContext(mApplication: BaseApplication): Context =
             mApplication.applicationContext
 
-    val MIGRATION: Migration = object : Migration(1, 2) {
+    val MIGRATION: Migration = object : Migration(0, 1) {
         override fun migrate(database: SupportSQLiteDatabase) {
             //database.execSQL("ALTER TABLE CovDistrictInfo");
+            Log.e("Migration-->", "is done")
         }
     }
     private val databaseCallback = object : RoomDatabase.Callback() {
@@ -40,8 +42,8 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun prodividesDatabase(application: Application): Database =
-            Room.databaseBuilder(application,Database::class.java, "app_db")
+    fun prodividesDatabase(context: Context): Database =
+            Room.databaseBuilder(context,Database::class.java, "app_db")
                     .addMigrations(MIGRATION)
                     .allowMainThreadQueries()
                     .fallbackToDestructiveMigration()
@@ -50,7 +52,7 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun providesRoomRepository(database: Database): RoomRepository = RoomRepository(database)
+    fun providesRoomRepository(noteDao: NoteDao): RoomRepository = RoomRepository(noteDao)
 
     @Singleton
     @Provides

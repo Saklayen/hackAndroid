@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/fragment_background"
     tools:context=".ui.home.fragments.note.NoteListFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/data_show"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:textColor="@color/black"
+        android:scrollbars="vertical"/>
 
 </FrameLayout>

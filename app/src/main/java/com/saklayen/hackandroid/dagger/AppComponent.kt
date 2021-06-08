@@ -8,7 +8,9 @@ import com.saklayen.hackandroid.dagger.viemodel.ViewModelModuleFactory
 import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
+import dagger.android.DaggerApplication
 import dagger.android.support.AndroidSupportInjectionModule
+import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
@@ -22,14 +24,15 @@ import javax.inject.Singleton
 )
 interface AppComponent: AndroidInjector<BaseApplication> {
 
-    /*@Component.Factory
-    interface Factory : AndroidInjector.Factory<BaseApplication>*/
-    @Component.Builder
+    @Component.Factory
+    interface Factory : AndroidInjector.Factory<BaseApplication>
+    /*@Component.Builder
     interface Builder{
         fun build(): AppComponent
 
         @BindsInstance
         fun appllication(application: Application): Builder
-    }
+    }*/
 
 }
+

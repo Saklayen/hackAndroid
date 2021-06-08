@@ -22,6 +22,9 @@ class StupFragment : DaggerFragment(R.layout.fragment_stup) {
         add.setOnClickListener {
             navigate(StupFragmentDirections.navigateToNoteAddFragment())
         }
+        list.setOnClickListener {
+            navigate(StupFragmentDirections.navigateToNoteListFragment())
+        }
     }
 
 }

@@ -9,4 +9,8 @@ class Note(
     var id: Int,
     var title: String?,
     var description: String?
-)
+){
+    override fun toString(): String {
+        return "id = $id title = $title des = $description"
+    }
+}
