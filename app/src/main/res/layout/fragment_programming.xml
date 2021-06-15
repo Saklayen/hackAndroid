@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/info_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appbar"
+                    style="@style/AppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:layout_scrollFlags="noScroll">
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/purple_500"
+                        android:gravity="bottom">
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/more_label_text_view"
+                            style="@style/TextTitleLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Programming"
+                            android:layout_marginBottom="20dp"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+                    </androidx.appcompat.widget.Toolbar>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/login_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/top_guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintGuide_begin="8dp" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/bottom_guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintGuide_end="8dp" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/start_guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_begin="12dp" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/end_guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_end="12dp" />
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/middle_guideline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center|top"
+                            android:padding="20dp"
+                            android:orientation="vertical">
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_margin="5dp"
+                                android:elevation="5dp"
+                                android:drawablePadding="15dp"
+                                android:background="@drawable/card_bg"
+                                android:gravity="center|start"
+                                android:text="Kotlin"
+                                android:drawableLeft="@drawable/kotlin_custom"/>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_margin="5dp"
+                                android:elevation="5dp"
+                                android:drawablePadding="15dp"
+                                android:background="@drawable/card_bg"
+                                android:gravity="center|start"
+                                android:text="Java"
+                                android:drawableLeft="@drawable/java_custom"/>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_margin="5dp"
+                                android:elevation="5dp"
+                                android:drawablePadding="15dp"
+                                android:background="@drawable/card_bg"
+                                android:gravity="center|start"
+                                android:text="OOP"
+                                android:drawableLeft="@drawable/oop_custom"/>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_margin="5dp"
+                                android:elevation="5dp"
+                                android:drawablePadding="15dp"
+                                android:background="@drawable/card_bg"
+                                android:gravity="center|start"
+                                android:text="Data Structure"
+                                android:drawableLeft="@drawable/ds_custom"/>
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:padding="10dp"
+                                android:layout_margin="5dp"
+                                android:elevation="5dp"
+                                android:drawablePadding="15dp"
+                                android:background="@drawable/card_bg"
+                                android:gravity="center|start"
+                                android:text="Algorithms"
+                                android:drawableLeft="@drawable/algo_custom"/>
+
+                        </LinearLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--<include
+            android:id="@+id/dashboard_loading"
+            layout="@layout/loading_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:resource="@{(Resource) viewModel.changePinResponseData}" />-->
+    </FrameLayout>
+</layout>

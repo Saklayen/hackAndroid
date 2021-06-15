@@ -8,6 +8,7 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.saklayen.hackandroid.BaseApplication
+import com.saklayen.hackandroid.base.ui.ActivityScreenSwitcher
 import com.saklayen.hackandroid.room.Database
 import com.saklayen.hackandroid.room.NoteDao
 import com.saklayen.hackandroid.room.repository.RoomRepository
@@ -24,6 +25,10 @@ class AppModule {
     @Provides
     fun providesApplicationContext(mApplication: BaseApplication): Context =
             mApplication.applicationContext
+
+    @Singleton
+    @Provides
+    fun provideActivityScreenSwitcher() = ActivityScreenSwitcher()
 
     val MIGRATION: Migration = object : Migration(0, 1) {
         override fun migrate(database: SupportSQLiteDatabase) {

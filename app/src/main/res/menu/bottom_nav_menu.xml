@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home"
-        android:title="Home"
-        android:icon="@drawable/ic_icon_user_home"/>
+        android:id="@+id/androidFragment"
+        android:title="Android"
+        android:icon="@drawable/android"/>
     <item
-        android:id="@+id/kotlin"
-        android:icon="@drawable/ic_ok"
-        android:title="Kotlin"/>
+        android:id="@+id/programmingFragment"
+        android:icon="@drawable/coding"
+        android:title="Programming"/>
     <item
-        android:id="@+id/java"
-        android:icon="@drawable/ic_icon_user_more"
-        android:title="Java"/>
-    <item
-        android:id="@+id/ui"
-        android:icon="@mipmap/ic_launcher"
+        android:id="@+id/UIFragment"
+        android:icon="@drawable/icon_ui"
         android:title="UI"/>
     <item
-        android:id="@+id/network"
+        android:id="@+id/networkFragment"
         android:icon="@drawable/ic_internet"
         android:title="Network"/>
 
